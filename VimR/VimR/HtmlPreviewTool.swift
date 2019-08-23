@@ -89,7 +89,7 @@ class HtmlPreviewTool: NSView, UiComponent, WKNavigationDelegate {
     self.monitor?.invalidate()
   }
 
-  private func reloadWebview(with url: URL) {
+  public func reloadWebview(with url: URL) {
     DispatchQueue.main.async {
       self.webview.evaluateJavaScript("document.body.scrollTop") { (result, error) in
         self.scrollTop = result as? Int ?? 0

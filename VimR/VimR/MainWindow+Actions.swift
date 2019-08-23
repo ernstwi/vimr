@@ -80,6 +80,11 @@ extension MainWindow {
       
       self.emit(self.uuidAction(for: .setCharacterspacing(characterspacing.cgf)))
 
+    case .reloadWebview:
+      guard params.count == 1 else { return }
+      guard let url = params[0].stringValue else { return }
+      self.htmlPreview?.reloadWebview(with: URL(string: url)!)
+
     }
   }
 

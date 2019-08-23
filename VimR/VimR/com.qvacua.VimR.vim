@@ -43,3 +43,8 @@ function! s:VimRSetCharacterspacing(characterspacing) abort
 call rpcnotify(0, 'com.qvacua.NvimView', 'set-linespacing', a:characterspacing)
 endfunction
 command! -nargs=1 VimRSetCharacterspacing call s:VimRSetCharacterspacing(<args>)
+
+function! s:VimRReloadWebview(url) abort
+	call rpcnotify(0, 'com.qvacua.NvimView', 'reload-webview', a:url)
+endfunction
+command! -nargs=1 VimRReloadWebview call s:VimRReloadWebview(<args>)

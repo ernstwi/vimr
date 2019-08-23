@@ -239,7 +239,7 @@ class MainWindow: NSObject,
   private var previewPosition = Marked(Position.beginning)
 
   private var preview: PreviewTool?
-  private var htmlPreview: HtmlPreviewTool?
+  public var htmlPreview: HtmlPreviewTool?
   private var fileBrowser: FileBrowser?
   private var buffersList: BuffersList?
 
